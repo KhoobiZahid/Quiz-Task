@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quiz App</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<main class="card">
+
+<section id="start">
+  <h1>Web Basics Quiz</h1>
+  <p>10 multiple-choice questions, one answer each. You have 20 seconds per question. When time runs out, quiz moves on and that question locks. Pass mark is 60%. Question order is random every attempt.</p>
+  <div class="stats">Highest score: <b id="best">none yet</b></div>
+  <button class="btn" id="startBtn">Start quiz</button>
+</section>
+
+<section id="quiz" class="hidden">
+  <div class="bar"><span id="qnum"></span><span class="timer" id="timer"></span></div>
+  <div class="progress"><div id="prog"></div></div>
+  <h2 id="qtext"></h2>
+  <div id="opts"></div>
+  <div class="nav">
+    <button class="btn alt" id="prev">Previous</button>
+    <button class="btn" id="next">Next</button>
+  </div>
+</section>
+
+<section id="result" class="hidden">
+  <h1>Quiz complete</h1>
+  <div class="big" id="pct"></div>
+  <span class="pill" id="status"></span>
+  <div class="stats">
+    <span>Score: <b id="score"></b></span>
+    <span>Correct: <b id="nc"></b></span>
+    <span>Incorrect: <b id="ni"></b></span>
+    <span>Unanswered: <b id="nu"></b></span>
+  </div>
+  <p id="bestMsg"></p>
+  <h2>Review</h2>
+  <div id="review"></div>
+  <button class="btn" id="again">Try again</button>
+</section>
+
+</main>
+<script src="quiz.js"></script>
+</body>
+</html>
